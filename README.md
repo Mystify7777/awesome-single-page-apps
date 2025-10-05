@@ -134,7 +134,7 @@ Stuck for ideas? Here are some popular project categories:
 ### 📊 Repository Stats
 
 - 🎯 **Total Projects**: 3
-- 👥 **Contributors**: 2
+- 👥 **Contributors**: 3
 - 🌟 **Stars**: Check the badge above
 - 🍴 **Forks**: Check the badge above
 

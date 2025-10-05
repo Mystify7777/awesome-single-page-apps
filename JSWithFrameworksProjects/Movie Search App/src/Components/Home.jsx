@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { buildApiUrl, isApiKeyConfigured } from '../utils/apiConfig';
 
 export default function Home() {
     const [text, setText] = useState("");
@@ -26,10 +27,23 @@ export default function Home() {
 
     const handle_click = () => {
         if (text.trim() === "") return;
-        const api = `https://www.omdbapi.com/?apikey=43becc80&s=${text}`;
+        
+        // Check if API key is configured
+        if (!isApiKeyConfigured()) {
+            alert("⚠️ API Configuration Missing!\n\nPlease:\n1. Copy .env.example to .env.local\n2. Add your OMDB API key\n3. Restart the development server");
+            return;
+        }
+        
+        // Build API URL using the helper function
+        const apiUrl = buildApiUrl(text);
+        if (!apiUrl) {
+            alert("❌ Failed to build API URL. Please check your configuration.");
+            return;
+        }
+        
         setIsloading(true);
         setSearchAttempted(true);   
-        getMovies(api);
+        getMovies(apiUrl);
     };
 
     const changetext = (e) => {

@@ -45,7 +45,39 @@ A responsive movie search application that allows users to search and discover m
    npm install
    ```
 
-3. **Start development server**
+3. **Configure API Key (IMPORTANT) - Easy Setup**
+
+   **Option A: Automated Setup (Recommended)**
+
+   ```bash
+   npm run setup
+   ```
+
+   This interactive script will guide you through getting and configuring your API key.
+
+   **Option B: Manual Setup**
+   
+   ```bash
+   # Copy the environment template
+   cp .env.example .env.local
+   ```
+
+   **Get your API key**:
+   - Visit [OMDB API](http://www.omdbapi.com/apikey.aspx)
+   - Register for a free API key
+   - Add your API key to `.env.local`:
+
+   ```env
+   # For Vite (recommended)
+   VITE_OMDB_API_KEY=your_api_key_here
+   
+   # For Create React App (if using CRA)
+   REACT_APP_OMDB_API_KEY=your_api_key_here
+   ```
+
+   ⚠️ **NEVER commit your actual API key to GitHub!**
+
+4. **Start development server**
 
    ```bash
    npm run dev
@@ -81,6 +113,39 @@ Movie Search App/
 ├── vite.config.js
 └── README.md
 ```
+
+## 🔒 Security Configuration
+
+### API Key Management
+
+This application uses the OMDB API which requires an API key. For security reasons, **NEVER hardcode API keys** in your source code.
+
+**✅ Correct Way (Environment Variables):**
+```javascript
+const apiKey = import.meta.env.VITE_OMDB_API_KEY;
+const api = `https://www.omdbapi.com/?apikey=${apiKey}&s=${text}`;
+```
+
+**❌ Wrong Way (Hardcoded):**
+```javascript
+// NEVER do this - exposed to anyone who views your code!
+const api = `https://www.omdbapi.com/?apikey=12345678&s=${text}`;
+```
+
+### Environment Setup
+
+1. **Create `.env.local` file** in the project root
+2. **Add your API key**: `VITE_OMDB_API_KEY=your_actual_key`
+3. **Add `.env.local` to `.gitignore`** (already included)
+4. **Share `.env.example`** with other developers (without real keys)
+
+### For Contributors
+
+If you're contributing to this project:
+
+1. Get your own free API key from [OMDB API](http://www.omdbapi.com/apikey.aspx)
+2. Create your own `.env.local` file using `.env.example` as a template
+3. Never commit files containing real API keys
 
 ## 🌟 Key Implementation Details
 
