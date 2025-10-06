@@ -124,6 +124,7 @@ Stuck for ideas? Here are some popular project categories:
 | **NFT Marketplace** | A modern NFT marketplace where users can buy and sell NFTs with a sleek UI built using modern web technologies | `React` `Vite` `TailwindCSS` `Shadcn/ui` `AceternityUI` | [🌐 Live Demo](https://nft-website-eight-sigma.vercel.app/) | [@HarshSharmaIN](https://github.com/HarshSharmaIN) |
 | **nClickHub** | Interactive showcase of beautiful button designs with hover effects, animations, and customizable styles for developers | `HTML5` `CSS3` `JavaScript` `CSS Animations` | [🌐 Live Demo](https://clickhub-hactoberfest2025.vercel.app/) | [@MRIEnan](https://github.com/MRIEnan) |
 | | | | | |
+| **TaskMaster** | A task management app to create, update, and track tasks with deadlines and priorities | `React` `TypeScript` `TailwindCSS` `Vite` `Lucide React` `ESLint` `Vercel` | [🌐 Live Demo](https://task-master-nine-sigma.vercel.app/) | [@Aadityahq](https://github.com/Aadityahq)
 
 > 🎉 **Want to be featured here?** Submit an exceptional project with great UI/UX and functionality!
 
