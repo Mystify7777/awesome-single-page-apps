@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { buildApiUrl, isApiKeyConfigured } from '../utils/apiConfig';
 
 export default function Home() {
@@ -7,6 +7,8 @@ export default function Home() {
     const [movie, setMovie] = useState([]);
     const [searchAttempted, setSearchAttempted] = useState(false);
 
+    // NEW: number of visible cards for staggered animation
+    const [visibleCount, setVisibleCount] = useState(0);
 
     const getMovies = async (url) => {
         try {
@@ -20,10 +22,34 @@ export default function Home() {
             }
         } catch (error) {
             console.error("Error fetching data:", error);
+            setMovie([]);
         } finally {
             setIsloading(false);
         }
     }; // ✅ CLOSED HERE
+
+    // NEW: effect to animate cards in with a stagger when `movie` changes
+    useEffect(() => {
+        // reset visible count on new movie list
+        setVisibleCount(0);
+
+        if (!movie || movie.length === 0) {
+            return;
+        }
+
+        let i = 0;
+        const intervalMs = 80; // delay between card reveals
+        const timer = setInterval(() => {
+            i += 1;
+            setVisibleCount(i);
+            if (i >= movie.length) {
+                clearInterval(timer);
+            }
+        }, intervalMs);
+
+        // cleanup on unmount or new movie list
+        return () => clearInterval(timer);
+    }, [movie]);
 
     const handle_click = () => {
         if (text.trim() === "") return;
@@ -76,28 +102,38 @@ export default function Home() {
                     <p className="text-center text-lg mt-10 text-blue-500">Loading...</p>
                 ) : movie.length > 0 ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-8">
-                        {movie.map((movie) => (
-                            <div
-                                key={movie.imdbID}
-                                className="bg-amber-100 p-4 shadow-lg rounded-xl overflow-hidden transform hover:scale-105 hover:bg-amber-200 transition-transform duration-300 border border-gray-300"
-                            >
-                                <img
-                                    className="w-full h-72 object-cover"
-                                    src={movie.Poster !== "N/A" ? movie.Poster : "https://t4.ftcdn.net/jpg/02/44/43/69/360_F_244436923_vkMe10KKKiw5bjhZeRDT05moxWcPpdmb.jpg"}
-                                    alt={movie.Title}
-                                />
-                                <div className="p-4 text-center">
-                                    <h2 className="text-xl font-semibold mb-1">{movie.Title}</h2>
-                                    <p className="text-sm text-gray-600">Year: {movie.Year}</p>
+                        {movie.map((m, idx) => {
+                            // Each card becomes "visible" after visibleCount advances past its index.
+                            const isVisible = idx < visibleCount;
+                            return (
+                                <div
+                                    key={m.imdbID}
+                                    className={
+                                        `bg-amber-100 p-4 shadow-lg rounded-xl overflow-hidden transform transition-all duration-500 border border-gray-300 ` +
+                                        (isVisible
+                                            ? 'opacity-100 translate-y-0 scale-100'
+                                            : 'opacity-0 translate-y-4 scale-95')
+                                    }
+                                    // inline style for staggered delay so items animate in cascade
+                                    style={{ transitionDelay: `${idx * 60}ms` }}
+                                >
+                                    <img
+                                        className="w-full h-72 object-cover"
+                                        src={m.Poster !== "N/A" ? m.Poster : "https://t4.ftcdn.net/jpg/02/44/43/69/360_F_244436923_vkMe10KKKiw5bjhZeRDT05moxWcPpdmb.jpg"}
+                                        alt={m.Title}
+                                    />
+                                    <div className="p-4 text-center">
+                                        <h2 className="text-xl font-semibold mb-1">{m.Title}</h2>
+                                        <p className="text-sm text-gray-600">Year: {m.Year}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 ) : (
                     searchAttempted && movie.length === 0 && !isloading && (
-                    <p className="text-center text-lg text-red-600 mt-10">No results found 😞</p>
-                )
-
+                        <p className="text-center text-lg text-red-600 mt-10">No results found 😞</p>
+                    )
                 )
             }
         </>
