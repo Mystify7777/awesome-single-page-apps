@@ -45,6 +45,41 @@ Ready to contribute? Here's how to get started:
 - ✅ A deployed project with live demo link
 - ✅ Creativity and enthusiasm!
 
+### 📝 How to Create a Pull Request
+
+**Step 1: Fork & Clone**
+```bash
+# Fork this repository using the Fork button above
+# Then clone your fork
+git clone https://github.com/YOUR_USERNAME/awesome-single-page-apps.git
+cd awesome-single-page-apps
+```
+
+**Step 2: Create a Branch**
+```bash
+git checkout -b add-your-project-name
+```
+
+**Step 3: Add Your Project**
+- Create a folder with your project name in `kebab-case`
+- Add your project files (index.html, README.md, etc.)
+- Update the project table in README.md with your project details
+
+**Step 4: Commit & Push**
+```bash
+git add .
+git commit -m "feat: Add your-project-name project"
+git push origin add-your-project-name
+```
+
+**Step 5: Open Pull Request**
+1. Go to your forked repository on GitHub
+2. Click **"Compare & pull request"** button
+3. Fill in the PR title and description
+4. Submit your pull request!
+
+> 💡 **Pro Tip**: Make sure your live demo link is working before submitting!
+
 ---
 
 ## 📋 Project Requirements
