@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* Light Theme */
+.theme-light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f8f9fa;
+  --accent: #0d6efd;
+  --accent-color: #0d6efd;
+  --shadow-color: #dee2e6;
+  --placeholder-color: #6c757d;
+}
+
+/* Dark Theme */
+.theme-dark {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --card-bg: #1e1e1e;
+  --accent: #0dcaf0;
+  --accent-color: #0dcaf0;
+  --shadow-color: #333;
+  --placeholder-color: #b0b3b8;
+}
+
+/* Apply to general elements */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+input::placeholder,
+textarea::placeholder,
+.form-control::placeholder {
+  color: var(--placeholder-color);
+  opacity: 1;
+}
+
+.search-bar {
+  outline: none;
+  border: none
+}
+
+/* Bootstrap base overrides */
+.card,
+.navbar,
+.form-control {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+}
+
+/* Custom Theme Utility Classes */
+.text-theme {
+  color: var(--text-color) !important;
+}
+
+.bg-theme {
+  background-color: var(--card-bg) !important;
+}
+
+.form-group,
+.form-select,
+option {
+  color: var(--text-color) !important;
+  border: none;
+}
+
+.dropdown-menu {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+}
+
+.dropdown-item {
+  color: var(--text-color) !important;
+}
+
+.dropdown-item:hover {
+  background-color: var(--accent-color) !important;
+  color: #fff !important;
+}
+
+.btn-primary {
+  background-color: var(--accent) !important;
+  border: none;
+}
