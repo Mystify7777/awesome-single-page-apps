@@ -1,0 +1,65 @@
+import React, { useState } from "react";
+
+export default function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div
+      style={{
+        textAlign: "center",
+        marginTop: "100px",
+        fontFamily: "Poppins, sans-serif",
+      }}
+    >
+      <h1>React Counter App 🚀</h1>
+      <h2>Count: {count}</h2>
+
+      <div style={{ marginTop: "20px" }}>
+        <button
+          onClick={() => setCount(count + 1)}
+          style={{
+            padding: "10px 20px",
+            margin: "10px",
+            backgroundColor: "#4CAF50",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+        >
+          Increment
+        </button>
+
+        <button
+          onClick={() => setCount(count - 1)}
+          style={{
+            padding: "10px 20px",
+            margin: "10px",
+            backgroundColor: "#f44336",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+        >
+          Decrement
+        </button>
+
+        <button
+          onClick={() => setCount(0)}
+          style={{
+            padding: "10px 20px",
+            margin: "10px",
+            backgroundColor: "#2196F3",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  );
+}
