@@ -9,7 +9,9 @@ Below are curated projects submitted by contributors. To add a project, open a P
 | **Movie Search App** | Search and discover movies using the OMDB API. | `React` `Vite` `TailwindCSS` `OMDB API` | [Live Demo](https://movie-search-app-11.netlify.app/) | [@pawanrajsingh2088](https://github.com/pawanrajsingh2088) |
 | **NFT Marketplace** | A modern marketplace for minting and browsing NFTs. | `React` `Vite` `TailwindCSS` | [Live Demo](https://nft-website-eight-sigma.vercel.app/) | [@HarshSharmaIN](https://github.com/HarshSharmaIN) |
 | **nClickHub** | Showcase of button designs and CSS animations. | `HTML` `CSS` `JavaScript` | [Live Demo](https://clickhub-hactoberfest2025.vercel.app/) | [@MRIEnan](https://github.com/MRIEnan) |
-| **TaskMaster** | Simple task manager with priorities and deadlines. | `React` `TypeScript` `TailwindCSS` | [Live Demo](https://task-master-nine-sigma.vercel.app/) | [@Aadityahq](https://github.com/Aadityahq) |
+| **Taskflow** | Task management app with simple UI. | `React` `Vite` `TailwindCSS` | [Live Demo](https://taskflow-aaditya.vercel.app) | [@aaditya-dubey09](https://github.com/aaditya-dubey09) |
+| **TaskMaster** | Simple task manager with priorities and deadlines and updated Ui. | `React` `TypeScript` `TailwindCSS` | [Live Demo](https://task-master-nine-sigma.vercel.app/) | [@Aadityahq](https://github.com/Aadityahq) |
+| **Project Name** | Brief description of your project. | `Tech1` `Tech2` | [Live Demo](https://your-demo-link.com) | [@your-github-username](https://github.com/your-github-username) |
 
 ---
 
