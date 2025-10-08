@@ -116,38 +116,6 @@ Stuck for ideas? Here are some popular project categories:
 
 ---
 
-## ✨ Featured Projects
-
-| Project Name | Description | Tech Stack | Live Demo | Contributor |
-|--------------|-------------|------------|-----------|-------------|
-| **Movie Search App** | A responsive movie search application that allows users to search and discover movies using the OMDB API | `React` `Vite` `TailwindCSS` `OMDB API` | [🌐 Live Demo](https://movie-search-app-11.netlify.app/) | [@pawanrajsingh2088](https://github.com/pawanrajsingh2088) |
-| **NFT Marketplace** | A modern NFT marketplace where users can buy and sell NFTs with a sleek UI built using modern web technologies | `React` `Vite` `TailwindCSS` `Shadcn/ui` `AceternityUI` | [🌐 Live Demo](https://nft-website-eight-sigma.vercel.app/) | [@HarshSharmaIN](https://github.com/HarshSharmaIN) |
-| **nClickHub** | Interactive showcase of beautiful button designs with hover effects, animations, and customizable styles for developers | `HTML5` `CSS3` `JavaScript` `CSS Animations` | [🌐 Live Demo](https://clickhub-hactoberfest2025.vercel.app/) | [@MRIEnan](https://github.com/MRIEnan) |
-| **TaskMaster** | A task management app to create, update, and track tasks with deadlines and priorities | `React` `TypeScript` `TailwindCSS` `Vite` `Lucide React` `ESLint` `Vercel` | [🌐 Live Demo](https://task-master-nine-sigma.vercel.app/) | [@Aadityahq](https://github.com/Aadityahq) |
-| | | | | |
-| **Example App** | Short description: a one-paragraph summary of your app (keep it concise) | `Vanilla JS` `HTML` `CSS` | [🌐 Live Demo](https://your-demo-url.example) | [@your-github-handle](https://github.com/your-github-handle) |
-
-> 🎉 **Want to be featured here?** Submit an exceptional project with great UI/UX and functionality!
-
----
-
-## 🏆 Hall of Fame
-
-### 📊 Repository Stats
-
-- 🎯 **Total Projects**: 3
-- 👥 **Contributors**: 3
-- 🌟 **Stars**: Check the badge above
-- 🍴 **Forks**: Check the badge above
-
-### 🏅 Recognition
-
-- 🥇 **Most Creative**: Coming soon...
-- 🥈 **Best UI/UX**: Coming soon...
-- 🥉 **Most Innovative**: Coming soon...
-
----
-
 ## 🤝 Community & Support
 
 ### 💬 Get Help
@@ -265,7 +233,6 @@ If you've never opened a PR before, here's a beginner-friendly walkthrough using
 4. Commit the changes to a new branch by choosing **Create a new branch for this commit and start a pull request** in the commit box.
 5. After committing, GitHub will show a **Compare & pull request** button — click it.
 6. Fill the PR title and description (include demo link, short summary, and any notes), then click **Create pull request**.
-
 
 ### Option B — Git command line (recommended once comfortable)
 

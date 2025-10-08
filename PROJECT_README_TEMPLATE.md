@@ -1,14 +1,21 @@
-# Project Name
+# Project README Template
 
-> 🎯 Replace "Project Name" with your actual project name
-
-A brief, compelling description of what your project does and who it's for. Keep it concise but informative (1-2 sentences).
+ Use this template for the `README.md` inside your project folder. Copy `PROJECT_README_TEMPLATE.md` into your project folder and update the fields.
 
 ## 🚀 Live Demo
 
-**[View Live Demo](your-live-demo-link-here)**
+ [View Live Demo](https://your-live-demo-link.com)
 
-> ⚠️ **Important**: Your live demo link must be working before submitting your PR!
+ > ⚠️ **Important**: Your live demo link must be working before submitting your PR!
+
+## 📁 Project Structure
+
+  ```bash
+ your-project-name/
+ ├── index.html
+ ├── style.css
+ ├── script.js
+   ```
 
 ## ✨ Features
 
@@ -35,7 +42,11 @@ List the technologies you used:
 ![Screenshot 1](./screenshots/screenshot1.png)
 *Caption describing what this screenshot shows*
 
-## 🏃‍♂️ Quick Start
+## 🏁 Quick Start
+
+ 1. Clone the repo (or copy files into your project folder)
+
+ 2. Open `index.html` in a browser (for static sites), or install dependencies for frameworks:
 
 ### Prerequisites
 
