@@ -116,7 +116,7 @@ Deploy your project to get a live demo link using one of these free services:
 
 ### 7. Update the README Table
 
-Open the main `README.md` file and add your project to the "Contributed Applications" table:
+Open the `CONTRIBUTOR.md` file and add your project to the "Contributed Applications" table:
 
 ```markdown
 | Your Project Name | Brief description of what it does | Tech Stack | [Live Demo](your-live-link) | [@yourusername](https://github.com/yourusername) |
