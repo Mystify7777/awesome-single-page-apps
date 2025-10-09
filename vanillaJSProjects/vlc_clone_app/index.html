@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLC Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="player-container">
+        <nav class="top-menu">
+            <ul>
+                <li>
+                    <a href="#">Media</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Open File...</a></li>
+                        <li><a href="#">Open Network Stream...</a></li>
+                        <li><a href="#">Save Playlist...</a></li>
+                        <li><a href="#">Quit</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Playback</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Play</a></li>
+                        <li><a href="#">Pause</a></li>
+                        <li><a href="#">Stop</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Audio</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Audio Track</a></li>
+                        <li><a href="#">Increase Volume</a></li>
+                        <li><a href="#">Decrease Volume</a></li>
+                        <li><a href="#">Mute</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Subtitle</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Add Subtitle File...</a></li>
+                        <li><a href="#">Subtitle Track</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#">View</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Fullscreen</a></li>
+                        <li><a href="#">Always on Top</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <video class="video-player" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
+
+        <div class="controls">
+            <button class="control-btn" id="play-pause"><i class="fa-solid fa-play"></i></button>
+            <button class="control-btn" id="stop"><i class="fa-solid fa-stop"></i></button>
+            <input type="range" class="timeline-slider" value="0" min="0" max="100" step="0.1">
+            <span class="time-display">00:00 / 00:00</span>
+            <div class="volume-container">
+                <button class="control-btn" id="mute"><i class="fa-solid fa-volume-high"></i></button>
+                <input type="range" class="volume-slider" value="1" min="0" max="1" step="0.01">
+            </div>
+            <button class="control-btn" id="fullscreen"><i class="fa-solid fa-expand"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
