@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+body.light {
+  background: #f2f2f7;
+  color: #1a1a1a;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #1e1e2f, #252540);
+  color: #fff;
+}
+
+.container {
+  background: var(--container-bg);
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.light .container {
+  --container-bg: #ffffff;
+}
+
+body.dark .container {
+  --container-bg: #2e2e4d;
+}
+
+/* ===== TEXT ===== */
+h1 {
+  margin-bottom: 20px;
+  color: #00ffcc;
+}
+
+#quote {
+  background: var(--quote-bg);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+body.light #quote {
+  --quote-bg: #f7f7fa;
+}
+
+body.dark #quote {
+  --quote-bg: #1b1b2b;
+}
+
+#input {
+  width: 100%;
+  height: 100px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+}
+
+body.light #input {
+  background: #fafafa;
+  color: #333;
+}
+
+body.dark #input {
+  background: #121224;
+  color: #00ffcc;
+}
+
+.stats {
+  margin-top: 20px;
+}
+
+button {
+  background: #00ffcc;
+  border: none;
+  color: #121224;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00ffaa;
+}
+
+#result {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #ffd166;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #00ffcc;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
