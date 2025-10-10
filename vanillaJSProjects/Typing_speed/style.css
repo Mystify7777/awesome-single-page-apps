@@ -14,7 +14,7 @@ body {
 }
 
 body.light {
-  background: #f2f2f7;
+  background: #FCF9EA;
   color: #1a1a1a;
 }
 
@@ -34,7 +34,7 @@ body.dark {
 }
 
 body.light .container {
-  --container-bg: #ffffff;
+  --container-bg: #b3f0ea;
 }
 
 body.dark .container {
@@ -42,9 +42,16 @@ body.dark .container {
 }
 
 /* ===== TEXT ===== */
-h1 {
+body.light h1 {
   margin-bottom: 20px;
-  color: #00ffcc;
+  color:#516b7b ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.dark h1 {
+  margin-bottom: 20px;
+  color: ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #quote {
@@ -82,14 +89,25 @@ body.light #input {
 
 body.dark #input {
   background: #121224;
-  color: #00ffcc;
+  color: #FFBDBD;
 }
 
 .stats {
   margin-top: 20px;
 }
 
-button {
+body.light button {
+  background: #658DA6;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+body.dark button {
   background: #00ffcc;
   border: none;
   color: #121224;
