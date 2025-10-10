@@ -4,24 +4,8 @@ A modern, minimalist Pomodoro timer app built with Next.js and TailwindCSS to bo
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-live-demo-link.com)
+[View Live Demo](https://focusly-sand.vercel.app/)
 
-> ⚠️ **Important**: Your live demo link must be working before submitting your PR!
-
-## 📁 Project Structure
-
-```bash
-pomodoro-timer-app/
-├── app/
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   └── ui/
-├── public/
-│   └── pomodoro-logo.png
-└── package.json
-```
 
 ## ✨ Features
 
@@ -45,20 +29,8 @@ List the technologies you used:
 - **UI Components**: Radix UI primitives (Dialog, Switch, Button, etc.)
 - **Icons**: Lucide React icon library
 - **APIs**: Web Audio API, Notifications API, localStorage
-- **Deployment**: Vercel, Netlify, GitHub Pages compatible
+- **Deployment**: Vercel
 
-## 📱 Screenshots
-
-> 📸 **Optional but recommended**: Add 1-3 screenshots of your app
-
-![Focusly Timer Interface](./screenshots/timer-interface.png)
-*Main timer interface showing work session with progress ring*
-
-![Settings Dialog](./screenshots/settings-dialog.png)
-*Customizable settings for durations and preferences*
-
-![Theme Toggle](./screenshots/theme-toggle.png)
-*Dark and light theme variations*
 
 ## � Quick Start
 
@@ -102,7 +74,6 @@ List the technologies you used:
 
 ## 🎮 How to Use
 
-Provide step-by-step instructions on how to use your application:
 
 1. **Start a Session**: Click the "Start" button to begin a 25-minute work session
 2. **Monitor Progress**: Watch the animated progress ring count down your session
