@@ -11,6 +11,7 @@ Below are curated projects submitted by contributors. To add a project, open a P
 | **nClickHub** | Showcase of button designs and CSS animations. | `HTML` `CSS` `JavaScript` | [Live Demo](https://clickhub-hactoberfest2025.vercel.app/) | [@MRIEnan](https://github.com/MRIEnan) |
 | **Taskflow** | Task management app with simple UI. | `React` `Vite` `TailwindCSS` | [Live Demo](https://taskflow-aaditya.vercel.app) | [@aaditya-dubey09](https://github.com/aaditya-dubey09) |
 | **TaskMaster** | Simple task manager with priorities and deadlines and updated Ui. | `React` `TypeScript` `TailwindCSS` | [Live Demo](https://task-master-nine-sigma.vercel.app/) | [@Aadityahq](https://github.com/Aadityahq) |
+| Focusly-pomodoro-timer-app | A modern, minimalist Pomodoro timer app | `React` `TypeScript` `TailwindCSS` | [Live Demo](https://focusly-sand.vercel.app/) | [@NeuralNik](https://github.com/NeuralNik) |
 | **Project Name** | Brief description of your project. | `Tech1` `Tech2` | [Live Demo](https://your-demo-link.com) | [@your-github-username](https://github.com/your-github-username) |
 
 ---
