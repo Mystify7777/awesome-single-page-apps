@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --color: #ffffff;
+        --size: 10;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .toolbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 90%;
+        height: 200px;
+        background-color: lightpink;
+      }
+      .canvasContainer {
+        width: 90%;
+        height: 50vh;
+        border: 1px solid black;
+        /* background-color: lightseagreen; */
+      }
+      @media only screen and (max-width: 600px) {
+        .toolbar {
+          width: 100%;
+        }
+        .canvasContainer {
+          height: 50vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <label for="color">Pick a Color</label>
+      <input id="color" type="color" name="color" value="black" />
+
+      <label for="size">Select Width</label>
+      <input
+        id="size"
+        type="range"
+        name="size"
+        min="5"
+        max="50"
+        value="10"
+        data-sizing="px"
+      />
+    </div>
+
+    <div class="canvasContainer">
+      <canvas id="canvas"></canvas>
+    </div>
+    <script>
+      const canvas = document.querySelector("#canvas");
+      const canvasContainer = document.querySelector(".canvasContainer");
+      const toolbar = document.querySelector(".toolbar");
+      const inputs = document.querySelectorAll(".toolbar input");
+
+      const context = canvas.getContext("2d");
+
+      function resizeFunc() {
+        canvas.width = canvasContainer.offsetWidth;
+        canvas.height = canvasContainer.offsetHeight;
+        context.strokeStyle = "black";
+        context.lineJoin = "round";
+        context.lineCap = "round";
+        context.lineWidth = 10;
+      }
+      resizeFunc();
+      window.addEventListener("resize", resizeFunc);
+
+      let isDrawing = false;
+      let lastX = 0;
+      let lastY = 0;
+
+      function draw(e) {
+        e.preventDefault();
+        if (!isDrawing) {
+          return;
+        }
+        context.beginPath(); // start from
+
+        context.moveTo(lastX, lastY); // go to
+
+        context.lineTo(e.offsetX, e.offsetY);
+        context.stroke();
+        lastX = e.offsetX;
+        lastY = e.offsetY;
+      }
+
+      canvas.addEventListener("mousemove", draw);
+      canvas.addEventListener("mousedown", (e) => {
+        isDrawing = true;
+        lastX = e.offsetX;
+        lastY = e.offsetY;
+      });
+      canvas.addEventListener("mouseup", () => (isDrawing = false));
+      canvas.addEventListener("mouseout", () => (isDrawing = false));
+
+      // function setUpdatedStyles() {               // too weird and complex using css variables
+      //   context.strokeStyle = getComputedStyle(
+      //     document.documentElement
+      //   ).getPropertyValue("--color");
+      //   context.lineWidth = parseInt(
+      //     getComputedStyle(document.documentElement).getPropertyValue("--size"),
+      //     10
+      //   );
+      //   context.lineJoin = "round";
+      //   context.lineCap = "round";
+      // }
+
+      function handleUpdate() {
+        const suffix = this.dataset.sizing || "";
+        const value = this.value + suffix;
+        if (this.name === "color") {
+          context.strokeStyle = value;
+        } else if (this.name === "size") {
+          context.lineWidth = parseInt(value, 10);
+        }
+
+        // document.documentElement.style.setProperty(   // weird and complex continued using css variables 
+        //   `--${this.name}`,
+        //   this.value + suffix
+        // );
+        // setUpdatedStyles();
+      }
+
+      inputs.forEach((input) => input.addEventListener("change", handleUpdate));
+      inputs.forEach((input) =>
+        input.addEventListener("mousemove", handleUpdate)
+      );
+
+      // canvas.addEventListener("touchstart", draw);
+
+      //     canvas.addEventListener("touchend",()=>isDrawing = false)
+      //     canvas.addEventListener("touchcancel",()=>isDrawing = false)
+      //     canvas.addEventListener("touchmove",(e)=>{
+      //         isDrawing = true;
+      //         lastX = e.offsetX;
+      //         lastY = e.offsetY;
+      //   })
+    </script>
+  </body>
+</html>
