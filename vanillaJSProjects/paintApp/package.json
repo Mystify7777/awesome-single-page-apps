@@ -1,0 +1,27 @@
+{
+  "name": "paint-studio-app",
+  "version": "1.0.0",
+  "description": "Advanced Paint Studio - A modern web-based painting application with professional features",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "start": "vercel dev"
+  },
+  "keywords": [
+    "paint",
+    "drawing",
+    "canvas",
+    "art",
+    "web-app",
+    "javascript",
+    "html5"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NeuralNik/awesome-single-page-apps.git"
+  },
+  "homepage": "https://github.com/NeuralNik/awesome-single-page-apps/tree/main/vanillaJSProjects/paintApp"
+}
