@@ -36,7 +36,7 @@ Shophub/
 ![Screenshot 1](./src/assets/screenshot1.png)
 *Home Page*
 
-![Screenshot 2](./src/assets/screenshot2.png/screenshot1.png)
+![Screenshot 2](./src/assets/screenshot2.png)
 *Product listing page with cart sidebar*
 
 
@@ -129,7 +129,7 @@ This project is part of the [awesome-single-page-apps](https://github.com/Mystif
 
 ## 📧 Contact
 
-- **GitHub**: [@your-username](https://github.com/Aadityahq)
+- **GitHub**: [@Aadityahq](https://github.com/Aadityahq)
 - **Email**:  aadityahq@gmail.com
 
 ---
