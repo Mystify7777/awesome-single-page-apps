@@ -13,6 +13,7 @@ Below are curated projects submitted by contributors. To add a project, open a P
 | **TaskMaster** | Simple task manager with priorities and deadlines and updated Ui. | `React` `TypeScript` `TailwindCSS` | [Live Demo](https://task-master-nine-sigma.vercel.app/) | [@Aadityahq](https://github.com/Aadityahq) |
 | Focusly-pomodoro-timer-app | A modern, minimalist Pomodoro timer app | `React` `TypeScript` `TailwindCSS` | [Live Demo](https://focusly-sand.vercel.app/) | [@NeuralNik](https://github.com/NeuralNik) |
 | **Shophub** | A simple e-commerce SPA for browsing and purchasing products. | `React` `Vite` `TailwindCSS` | [Live Demo](https://shophub-web.netlify.app/) | [@Aadityahq](https://github.com/Aadityahq) |
+| **Spotify Clone** | A Spotify-like music player with search, playlists, and playback controls using the Spotify Web API. | `React` `Vite` `TypeScript` `TailwindCSS` `Spotify Web API` | [Live Demo](https://spotfiy-v2.netlify.app/) | [@Aadityahq](https://github.com/Aadityahq) |
 
 ---
 
