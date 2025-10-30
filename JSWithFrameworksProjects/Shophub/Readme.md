@@ -4,7 +4,7 @@ A modern single-page e-commerce app built with JavaScript and frameworks.
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-live-demo-link.com)
+[View Live Demo](https://shophub-web.netlify.app/)
 
 > ⚠️ **Important**: Your live demo link must be working before submitting your PR!
 
