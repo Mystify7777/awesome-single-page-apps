@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Inspire Me ✨</title>
+<style>
+  body { font-family: "Poppins", sans-serif; background: linear-gradient(135deg, #667eea, #764ba2); color: white; display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; }
+  .card { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px; box-shadow: 0 2px 15px rgba(0,0,0,0.2); max-width: 400px; }
+  button { background: white; color: #764ba2; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h2 id="quote">Loading...</h2>
+  <p id="author"></p>
+  <button onclick="getQuote()">New Quote</button>
+</div>
+<script>
+  async function getQuote() {
+    const res = await fetch("https://api.quotable.io/random");
+    const data = await res.json();
+    document.getElementById("quote").textContent = `"${data.content}"`;
+    document.getElementById("author").textContent = `– ${data.author}`;
+  }
+  getQuote();
+</script>
+</body>
+</html>
