@@ -12,7 +12,7 @@ Below are curated projects submitted by contributors. To add a project, open a P
 | **Taskflow** | Task management app with simple UI. | `React` `Vite` `TailwindCSS` | [Live Demo](https://taskflow-aaditya.vercel.app) | [@aaditya-dubey09](https://github.com/aaditya-dubey09) |
 | **TaskMaster** | Simple task manager with priorities and deadlines and updated Ui. | `React` `TypeScript` `TailwindCSS` | [Live Demo](https://task-master-nine-sigma.vercel.app/) | [@Aadityahq](https://github.com/Aadityahq) |
 | Focusly-pomodoro-timer-app | A modern, minimalist Pomodoro timer app | `React` `TypeScript` `TailwindCSS` | [Live Demo](https://focusly-sand.vercel.app/) | [@NeuralNik](https://github.com/NeuralNik) |
-| **Shophub** | A simple e-commerce SPA for browsing and purchasing products. | `React` `Vite` `TailwindCSS` | [Live Demo](https://shophub-web.netlify.app/) | [@your-github-username](https://github.com/Aadityahq) |
+| **Shophub** | A simple e-commerce SPA for browsing and purchasing products. | `React` `Vite` `TailwindCSS` | [Live Demo](https://shophub-web.netlify.app/) | [@Aadityahq](https://github.com/Aadityahq) |
 
 ---
 
