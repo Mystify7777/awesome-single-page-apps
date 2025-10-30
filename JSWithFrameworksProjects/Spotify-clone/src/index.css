@@ -1,0 +1,96 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 18 18 18;
+    --foreground: 255 255 255;
+
+    --card: 24 24 24;
+    --card-foreground: 255 255 255;
+
+    --popover: 24 24 24;
+    --popover-foreground: 255 255 255;
+
+    --primary: 29 185 84;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 40 40 40;
+    --secondary-foreground: 255 255 255;
+
+    --muted: 24 24 24;
+    --muted-foreground: 163 163 163;
+
+    --accent: 139 92 246;
+    --accent-foreground: 255 255 255;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+
+    --border: 40 40 40;
+    --input: 40 40 40;
+    --ring: 29 185 84;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0 0;
+    --sidebar-foreground: 255 255 255;
+    --sidebar-primary: 29 185 84;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 24 24 24;
+    --sidebar-accent-foreground: 255 255 255;
+    --sidebar-border: 40 40 40;
+    --sidebar-ring: 29 185 84;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-spotify-dark text-spotify-white font-inter;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-lg;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #06B6D4 100%);
+  }
+  
+  .track-hover {
+    @apply transition-all duration-200 hover:bg-white/5 hover:scale-[1.02] cursor-pointer;
+  }
+  
+  .player-shadow {
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #606060;
+}
